@@ -1,0 +1,18 @@
+# ignore everything in root that will be the destination of build output
+/*
+
+# white list allowed files
+!build.js
+!src
+!src/
+!src/*
+!.npmignore
+!.gitignore
+!LICENSE
+!package.json
+!README.md
+!tsconfig.json
+!tsconfig.*
+
+# Incremental ts info
+tsconfig.tsbuildinfo
