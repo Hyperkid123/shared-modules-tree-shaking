@@ -1,5 +1,5 @@
 {
-  "name": "normal-module-lib",
+  "name": "@repo/normal-module-lib",
   "version": "1.0.0",
   "main": "index.js",
   "module": "esm/index.js",

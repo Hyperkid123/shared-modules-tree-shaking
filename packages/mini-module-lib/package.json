@@ -1,5 +1,5 @@
 {
-  "name": "mini-module-lib",
+  "name": "@repo/mini-module-lib",
   "version": "1.0.0",
   "main": "index.js",
   "module": "esm/index.js",
