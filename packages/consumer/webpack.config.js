@@ -7,10 +7,14 @@ const federatedPlugin = new webpack.container.ModuleFederationPlugin({
   name: 'consumer',
   shared: {
     // normal module library has to be shared in its entirity because of relative imports
+    // we can;t point directly to CJS/ESM because te application will not be usable in both envs
     "@repo/normal-module-lib": { requiredVersion: "*" },
     // with absolute imports we can share only used modules even with relative import path
-    // CJS and ESM builds are esolved automatically
+    // CJS and ESM builds are resolved automatically
     "@repo/mini-module-lib/moduleA": {requiredVersion: "*"},
+    // even though the mini module is shared, it will not appear in the output bundle, unless it is used
+    "@repo/mini-module-lib/moduleB": {requiredVersion: "*"},
+
 
     // PF as ashared module
     "@patternfly/react-core": {requiredVersion: "*"}
